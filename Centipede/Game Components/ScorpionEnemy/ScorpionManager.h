@@ -10,8 +10,8 @@ class ScorpionManager {
 private:
 	static ScorpionManager* ptrInstance;
 
-	ScorpionManager() = default;												// Private constructor
-	ScorpionManager(const ScorpionManager&) = delete;				// Prevent copy-construction
+	ScorpionManager() = default;					// Private constructor
+	ScorpionManager(const ScorpionManager&) = delete;		// Prevent copy-construction
 	ScorpionManager& operator=(const ScorpionManager&) = delete;	// Prevent assignment
 
 	static ScorpionManager& Instance()	    // Access reference (all public methods will be static)
