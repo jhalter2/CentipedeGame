@@ -11,10 +11,10 @@ private:
 	// Game set up as a singleton
 	static FleaFactory* ptrInstance;			
 
-	FleaFactory() = default;												// Private constructor
-	FleaFactory(const FleaFactory&) = delete;				// Prevent copy-construction
+	FleaFactory() = default;				// Private constructor
+	FleaFactory(const FleaFactory&) = delete;		// Prevent copy-construction
 	FleaFactory& operator=(const FleaFactory&) = delete;	// Prevent assignment
-	~FleaFactory();														// Only this class can delete
+	~FleaFactory();	                                        // Only this class can delete
 
 	static FleaFactory& Instance()	    // Access reference (all public methods will be static)
 	{
@@ -25,10 +25,7 @@ private:
 
 	std::stack<Flea*> recycledItems;  // Back to be a non-static member
 
-										// Note: Some factory designs also keep a list of 'currently active' objects
-										// Often useful at cleanup time. Not done for this demo however
-
-										// Private NON_STATIC methods to perform actual work on member var
+	// Private NON_STATIC methods to perform actual work on member var
 	Flea* privCreateFlea(sf::Vector2f p, MushroomField* pM);
 	void privRecycleFlea(GameObject* b);
 
