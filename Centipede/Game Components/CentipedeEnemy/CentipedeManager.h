@@ -13,8 +13,8 @@ class CentipedeManager {
 private:
 	static CentipedeManager* ptrInstance;
 
-	CentipedeManager();												// Private constructor
-	CentipedeManager(const CentipedeManager&) = delete;				// Prevent copy-construction
+	CentipedeManager();						// Private constructor
+	CentipedeManager(const CentipedeManager&) = delete;		// Prevent copy-construction
 	CentipedeManager& operator=(const CentipedeManager&) = delete;	// Prevent assignment
 
 	static CentipedeManager& Instance()	    // Access reference (all public methods will be static)
