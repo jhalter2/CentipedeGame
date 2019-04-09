@@ -13,11 +13,11 @@ class CritterSpawner : public GameObject{
 private:
 	static CritterSpawner* ptrInstance;
 
-	CritterSpawner() = default;												// Private constructor
-	CritterSpawner(const CritterSpawner&) = delete;				// Prevent copy-construction
+	CritterSpawner() = default;					// Private constructor
+	CritterSpawner(const CritterSpawner&) = delete;			// Prevent copy-construction
 	CritterSpawner& operator=(const CritterSpawner&) = delete;	// Prevent assignment
 	
-	static CritterSpawner& Instance()							// Access reference (all public methods will be static)
+	static CritterSpawner& Instance()			// Access reference (all public methods will be static)
 	{
 		if (!ptrInstance)
 			ptrInstance = new CritterSpawner;
