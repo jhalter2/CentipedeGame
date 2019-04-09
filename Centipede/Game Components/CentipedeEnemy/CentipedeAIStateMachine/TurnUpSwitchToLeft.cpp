@@ -32,8 +32,6 @@ const MoveState* TurnUpSwitchToLeft::GetNextState(CentipedeHead* chead) const
 	if (obst == MushroomField::Obstacle::Clear)
 	{
 		pNextState = &MoveFSM::StateMoveLeftAndUpwards;
-		//chead->SetScale(2.0f, 2.0f);
-
 	}
 	else if (obst == MushroomField::Obstacle::Blocked) // Edge, shroom or letter?
 	{
