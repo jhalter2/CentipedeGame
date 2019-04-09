@@ -10,8 +10,8 @@ class FleaManager {
 private:
 	static FleaManager* ptrInstance;
 
-	FleaManager() = default;												// Private constructor
-	FleaManager(const FleaManager&) = delete;				// Prevent copy-construction
+	FleaManager() = default;				// Private constructor
+	FleaManager(const FleaManager&) = delete;		// Prevent copy-construction
 	FleaManager& operator=(const FleaManager&) = delete;	// Prevent assignment
 
 	static FleaManager& Instance()	    // Access reference (all public methods will be static)
