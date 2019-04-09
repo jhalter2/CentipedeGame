@@ -32,10 +32,6 @@ const MoveState* TurnDownSwitchToLeft::GetNextState(CentipedeHead* chead) const
 	if (obst == MushroomField::Obstacle::Clear)
 	{
 		pNextState = &MoveFSM::StateMoveLeftAndDownwards;
-		//chead->SetScale(2.0f, 2.0f);
-		//for (int i = 0; i < 17; i++) {
-		//	chead->SetRotation(11.25f * (float)i);
-		//}
 	}
 	else if (obst == MushroomField::Obstacle::Blocked) // Edge, shroom or letter?
 	{
@@ -46,9 +42,6 @@ const MoveState* TurnDownSwitchToLeft::GetNextState(CentipedeHead* chead) const
 	}
 	else // poison
 	{
-		// Not implemented
-		//assert(false && "Poison state not implemented yet!");
-		//pNextState = nullptr;
 		pNextState = &MoveFSM::StatePoisonMoveDown;
 	}
 
