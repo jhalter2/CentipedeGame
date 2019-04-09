@@ -25,9 +25,6 @@ private:
 
 	std::stack<CentipedeHead*> recycledItems;  // Back to be a non-static member
 
-									  // Note: Some factory designs also keep a list of 'currently active' objects
-									  // Often useful at cleanup time. Not done for this demo however
-
 	//create centipede head with position, mushroomfield, speed, column, and body length
 	CentipedeHead* privCreateCentipedeHead(sf::Vector2f p, MushroomField* pM, float s, float c, int b);
 	void privRecycleCentipedeHead(GameObject* x);
