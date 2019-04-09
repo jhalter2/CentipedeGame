@@ -11,8 +11,8 @@ private:
 	// Game set up as a singleton
 	static CentipedeHeadFactory* ptrInstance;
 
-	CentipedeHeadFactory() = default;												// Private constructor
-	CentipedeHeadFactory(const CentipedeHeadFactory&) = delete;				// Prevent copy-construction
+	CentipedeHeadFactory() = default;					// Private constructor
+	CentipedeHeadFactory(const CentipedeHeadFactory&) = delete;		// Prevent copy-construction
 	CentipedeHeadFactory& operator=(const CentipedeHeadFactory&) = delete;	// Prevent assignment
 	~CentipedeHeadFactory();														// Only this class can delete
 
