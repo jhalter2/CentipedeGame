@@ -12,8 +12,8 @@ private:
 	// Game set up as a singleton
 	static CentipedeBodyFactory* ptrInstance;
 
-	CentipedeBodyFactory() = default;												// Private constructor
-	CentipedeBodyFactory(const CentipedeBodyFactory&) = delete;				// Prevent copy-construction
+	CentipedeBodyFactory() = default;					// Private constructor
+	CentipedeBodyFactory(const CentipedeBodyFactory&) = delete;		// Prevent copy-construction
 	CentipedeBodyFactory& operator=(const CentipedeBodyFactory&) = delete;	// Prevent assignment
 	~CentipedeBodyFactory();														// Only this class can delete
 
@@ -26,10 +26,8 @@ private:
 
 	std::stack<CentipedeBody*> recycledItems;  // Back to be a non-static member
 
-											   // Note: Some factory designs also keep a list of 'currently active' objects
-											   // Often useful at cleanup time. Not done for this demo however
 
-											   //create centipede head with position, mushroomfield, speed, column, and body length
+	//create centipede head with position, mushroomfield, speed, column, and body length
 	CentipedeBody* privCreateCentipedeBody(CentipedeHead* pHead, CentipedeBody* pNext, CentipedeBody* pPrev);
 	void privRecycleCentipedeBody(GameObject* x);
 
