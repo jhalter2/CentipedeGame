@@ -11,10 +11,10 @@ private:
 	// Game set up as a singleton
 	static ScorpionFactory* ptrInstance;
 
-	ScorpionFactory() = default;												// Private constructor
-	ScorpionFactory(const ScorpionFactory&) = delete;				// Prevent copy-construction
+	ScorpionFactory() = default;					// Private constructor
+	ScorpionFactory(const ScorpionFactory&) = delete;		// Prevent copy-construction
 	ScorpionFactory& operator=(const ScorpionFactory&) = delete;	// Prevent assignment
-	~ScorpionFactory();														// Only this class can delete
+	~ScorpionFactory();						// Only this class can delete
 
 	static ScorpionFactory& Instance()	    // Access reference (all public methods will be static)
 	{
@@ -25,10 +25,7 @@ private:
 
 	std::stack<Scorpion*> recycledItems;  // Back to be a non-static member
 
-									  // Note: Some factory designs also keep a list of 'currently active' objects
-									  // Often useful at cleanup time. Not done for this demo however
-
-									  // Private NON_STATIC methods to perform actual work on member var
+	// Private NON_STATIC methods to perform actual work on member var
 	Scorpion* privCreateScorpion(sf::Vector2f p, MushroomField* pM, float speed, float direction);
 	void privRecycleScorpion(GameObject* b);
 
